@@ -1,5 +1,6 @@
 package gr.codelearn.javapathjakartarestadvantageshowcase.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,7 @@ public class Ability {
     private Integer duration;
     @ManyToOne
     @JoinColumn(name = "player_id")
+    @JsonIgnore
     private Player player;
 
     @Override
